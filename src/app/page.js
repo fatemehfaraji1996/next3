@@ -1,8 +1,17 @@
 import Nav from "@/components/Nav";
+import User from "@/components/User";
 
 
-export default function Home() {
+export default async function Home() {
+
+
   return (
-   <Nav/>
+    <>
+    <Nav/>
+    <User></User>
+    
+    </>
+   
+
   );
 }

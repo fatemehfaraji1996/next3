@@ -15,7 +15,7 @@ export default function Nav() {
       {pages.map((item, i) => {
         return (
           <Link className="" href={item.rout}>
-            {item.title}
+            {item.title} 
           </Link>
         );
       })}
