@@ -1,15 +1,14 @@
 import Nav from "@/components/Nav";
-import User from "@/components/User";
+import User from "@/components/HomePage";
+import Homepage from "@/components/HomePage";
 
 
-export default async function Home() {
+export default function Home() {
 
 
   return (
     <>
-    <Nav/>
-    <User></User>
-    
+  <Homepage></Homepage>
     </>
    
 

@@ -14,11 +14,19 @@ export default function Nav() {
     <div className="flex gap-14 bg-green-300 p-8">
       {pages.map((item, i) => {
         return (
-          <Link className="" href={item.rout}>
+
+          <>
+          
+          <Link key={i} className="" href={item.rout}>
             {item.title} 
           </Link>
+        
+          </>
+          
         );
       })}
     </div>
+
+
   );
 }
