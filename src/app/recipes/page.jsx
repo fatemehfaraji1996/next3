@@ -1,7 +1,23 @@
+import GetData from '@/utils/fetchData'
 import React from 'react'
 
-export default function recipes() {
+export  default async function recipes() {
+  const foodsRecipes= await GetData('https://dummyjson.com/recipes')
+  const recipesArr=await foodsRecipes.recipes
+  console.log(recipesArr);
+  
   return (
-    <div>recipes</div>
+    <>
+    
+    {
+ recipesArr.map((x)=>{
+   return(
+     <p>{x.id}</p>
+   )
+ })
+ 
+    }
+    
+    </>
   )
 }
