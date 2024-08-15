@@ -2,11 +2,16 @@ import GetData from "@/utils/fetchData";
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: 'bether posts',
+  description: 'post',
+}
+
 export default async function postes() {
   const respanse = await GetData("https://dummyjson.com/posts");
   const post = respanse.posts;
   console.log(respanse.id);
-  
+ 
   return (
     <>
       <div>posts</div>

@@ -1,6 +1,11 @@
 import React from 'react'
 import GetData from "@/utils/fetchData";
 import Link from 'next/link';
+export const metadata = {
+  title: 'users',
+  description: 'active users ',
+}
+
 export default async function users() {
   const users = await GetData("https://dummyjson.com/users");
   const dataOfUsers = users.users;
