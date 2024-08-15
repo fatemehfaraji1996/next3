@@ -2,6 +2,14 @@ import React from 'react'
 
 import GetData from '@/utils/fetchData'
 //  import notFound from '@/app/not-found'
+
+
+export async function generatametadata ({params,serchparams}) {
+  return{
+    title:'recipe your select food',
+    description:'recipe foods '
+  }
+}
 export default async function page({params}) {
   const recipeById = await GetData(`https://dummyjson.com/recipes/${params.idRecipes}`)
   
