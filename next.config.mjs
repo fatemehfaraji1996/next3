@@ -3,6 +3,8 @@
 const nextConfig = {
     images: {
         domains: ['cdn.dummyjson.com'],
+    domains: ['encrypted-tbn0.gstatic.com']
+        
    }}
 
 
