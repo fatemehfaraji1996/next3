@@ -4,9 +4,10 @@ import GetData from '@/utils/fetchData'
 //  import notFound from '@/app/not-found'
 
 
-export async function generatametadata ({params,serchparams}) {
+export async function generateMetadata ({params,searchParams}) {
   return{
-    title:'recipe your select food',
+    title:`recipe${params.idRecipes}`,
+    // title:`recipe${params.idRecipes} - ${searchParams.q}`,
     description:'recipe foods '
   }
 }

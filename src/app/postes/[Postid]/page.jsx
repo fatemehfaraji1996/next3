@@ -1,11 +1,16 @@
 import GetById from "@/utils/GetById";
 import React from "react";
-
+export async function generateMetadata({params,searchParams}) {
+  return{
+    title:`post ${params.Postid}`,
+    discreption :'post '
+  }
+}
 export default async function page({params}) {
   const resss = await GetById(`https://dummyjson.com/posts/${params.Postid}
     `);
 
-  console.log(resss);
+
   return (
     <>
     
