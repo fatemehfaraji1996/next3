@@ -1,4 +1,3 @@
-
 import React from 'react'
 import GetData from "@/utils/fetchData";
 import Link from 'next/link';
