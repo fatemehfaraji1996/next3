@@ -10,7 +10,8 @@ export const metadata = {
 export default function recipes() {
   return (
     <Suspense fallbac={<p>loding...........</p>} k>
-      <ResepiCards></ResepiCards>
+      <ResepiCards>
+      </ResepiCards>
     </Suspense>
   );
 }
