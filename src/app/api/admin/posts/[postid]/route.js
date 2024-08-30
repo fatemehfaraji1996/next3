@@ -8,6 +8,8 @@ export async function GET(req, { params }) {
   const response = recipe.find((x) => x.id == params.postid);
 
   if (!response) {
+
+    
     return Response.json("erore");
   }
 
