@@ -11,16 +11,19 @@ const arr = [
     2: "c",
   },
 ];
+const giveData=[]
 export async function GET() {
   const data = await GetData("https://dummyjson.com/posts");
   const user = data.posts;
-
-
-  return Response.json(data);
+  giveData.push(data)
+  return Response.json(giveData);
 }
 
 export async function POST(req) {
   const body = await req.json();
-  arr.push(body);
-  return Response.json(arr);
+  // arr.push(body);
+  // return Response.json(arr);
+
+  giveData.push(body);
+  return Response.json(giveData);
 }
