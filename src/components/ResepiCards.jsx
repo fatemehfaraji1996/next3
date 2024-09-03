@@ -13,6 +13,10 @@ export default function ResepiCards({recipesArr}) {
   const router = useRouter();
   return (
     <>
+            <div className='m-5'>
+            <button id='addb' className='bg-lime-400 p-4 '>Add Recipe</button>
+            <input className='bg-lime-200 p-4' type="text" />
+            </div>
       <div className="flex flex-wrap gap-5  p-10">
         {recipesArr.map((x) => {
           return (

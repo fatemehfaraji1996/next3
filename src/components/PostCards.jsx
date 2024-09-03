@@ -8,7 +8,11 @@ export default async function PostCards() {
    
     return (
       <>
-        <div>posts</div>
+
+        <div className='m-5'>
+        <button className='bg-lime-400 p-4 '>Add Post</button>
+        <input className='bg-lime-200 p-4' type="text" />
+        </div>
         {post.map((x) => {
           return(
             <Link href={`/postes/${x.id}`}>
