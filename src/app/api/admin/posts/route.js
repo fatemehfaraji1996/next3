@@ -12,13 +12,14 @@ const arr = [
     2: "c",
   },
 ];
-const giveData=[]
+// const giveData=[]
+const {posts} = await GetData("https://dummyjson.com/posts");
 export async function GET() {
-  const data = await GetData("https://dummyjson.com/posts");
-  const user = data.posts;
-  giveData.push(data)
-  return Response.json(user);
-  // return Response.json(data);
+  // const user = data.posts;
+   const  data = posts
+  // giveData.push(data)
+  // return Response.json(user);
+  return Response.json(data);
 }
 
 export async function POST(req) {
