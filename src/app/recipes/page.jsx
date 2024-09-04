@@ -9,7 +9,12 @@ export const metadata = {
 };
 
 export default async function recipes() {
-  const {recipes} = await GetData("https://dummyjson.com/recipes");
+
+    
+    const {recipes} = await GetData("https://dummyjson.com/recipes");
+    // console.log(recipes);
+  
+  
   return (
     <Suspense fallbac={<p>loding...........</p>} k>
       <ResepiCards recipesArr={recipes} />

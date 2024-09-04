@@ -1,18 +1,16 @@
 import React from 'react'
 import GetData from "@/utils/fetchData";
 import Link from "next/link";
+import CreatPost from './CreatPost';
 export default async function PostCards() {
-    const respanse = await GetData("https://dummyjson.com/posts");
+    const respanse = await GetData("http://localhost:3000/api/admin/posts");
     const post = respanse.posts;
-    console.log(respanse.id);
+    console.log(post);
    
     return (
       <>
 
-        <div className='m-5'>
-        <button className='bg-lime-400 p-4 '>Add Post</button>
-        <input className='bg-lime-200 p-4' type="text" />
-        </div>
+       <CreatPost></CreatPost>
         {post.map((x) => {
           return(
             <Link href={`/postes/${x.id}`}>
