@@ -1,4 +1,3 @@
-
 import React from "react";
 import GetData from "@/utils/fetchData";
 import Link from "next/link";
@@ -10,7 +9,7 @@ export default async function PostCards() {
 
   return (
     <>
-    <CreatPost></CreatPost>
+      <CreatPost></CreatPost>
       {posts.map((x) => (
         <Link key={x.id} href={`/posts/${x.id}`}>
           <div className="flex w-2/3 bg-lime-200 p-10">

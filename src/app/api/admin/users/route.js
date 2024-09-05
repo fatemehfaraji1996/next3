@@ -4,8 +4,17 @@
 
 import GetData from "@/utils/fetchData";
 
-export async function GET() {
-  const data = await GetData("https://dummyjson.com/users");
-  const user = data.users;
-  return Response.json(user);
+// import GetData from "../../../../utils/fetchData";
+
+
+
+const {users} = await GetData("https://dummyjson.com/users");
+export  function GET() {
+  return Response.json(users);
 }
+
+// const { posts } = await GetData("https://dummyjson.com/users");
+// export const data = posts;
+// export function GET() {
+//   return Response.json(data);
+// }
