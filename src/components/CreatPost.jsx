@@ -8,7 +8,7 @@ export default function CreatPost() {
   async function handleSubmit(e) {
     e.preventDefault();
     await addUser(title);
-    setTitle("");
+    // setTitle("");
   }
 
   return (
