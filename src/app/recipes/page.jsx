@@ -10,7 +10,6 @@ export const metadata = {
 
 export default async function recipes() {
   const recipes = await GetData("http://localhost:3000/api/admin/recipes");
-
   return (
     <Suspense fallbac={<p>loding...........</p>} k>
       <ResepiCards recipesArr={recipes} />
