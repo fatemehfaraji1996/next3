@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 
 export default function CreatPost() {
-  const [title, setTitle] = useState();
+  const [title, setTitle] = useState("");
   async function handleSubmit(e) {
     e.preventDefault();
     await addUser(title);
