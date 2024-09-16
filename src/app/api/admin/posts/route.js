@@ -5,8 +5,7 @@
 import GetData from "../../../../utils/fetchData";
 
 
-const { posts } = await
- GetData("https://dummyjson.com/posts");
+const { posts } = await GetData("https://dummyjson.com/posts");
 export const data = posts;
 export function GET() {
   return Response.json(data);
