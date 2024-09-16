@@ -12,8 +12,6 @@ export default function CreatPost() {
   }
 
   return (
-
-    
     <form onSubmit={(e) => handleSubmit(e)}>
       <div className="m-5 bg-lime-200 w-72">
         <p className="m-10 italic  ">creat new post</p>
