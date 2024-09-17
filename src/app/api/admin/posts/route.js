@@ -19,6 +19,6 @@ export function GET() {
 
 export async function POST(req) {
   const body = await req.json();
-  const add= {...posts,body}
+  const add = {...posts,...body}
   return Response.json(add);
 }
