@@ -2,27 +2,37 @@
 import { addUser } from "@/utils/actions";
 import React from "react";
 import { useState } from "react";
-
 export default function CreatPost() {
-  const [title, setTitle] = useState("");
+  const [post, setPost] = useState({
+    title: "",
+    body: "",
+  });
   async function handleSubmit(e) {
     e.preventDefault();
-    await addUser(title);
-    setTitle("");
+    await addUser(post);
+    setPost({title:"",body:""});
   }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    // <form onSubmit={(e) => handleSubmit(e)}>
+    <form onSubmit= {handleSubmit}>
+
       <div className="m-5 bg-lime-200 w-72">
         <p className="m-10 italic  ">creat new post</p>
         <p>post</p>
-        <input value={title} onChange={(e) => setTitle(e.target.value)} />
+        {/* <input value={post} onChange={(e) => setPost(e.target.value)} /> */}
+        <input   placeholder="Enter your cpost"
+          className="bg-lime-300 p-4 m-2" value={post.title} onChange={(e) => setPost({...post,title:e.target.value})} />
+
+
         <p> caption</p>
-        {/* <input
+        <input
           placeholder="Enter your caption"
-          className="bg-lime-300 p-4 m-2"
+          className="bg-lime-300 p-4 m-2 h-48"
           type="text"
-        /> */}
+          value={post.body}
+          onChange={(e) => setPost({...post,body:e.target.value})}
+        />
         <button type="submit" className="bg-lime-400 p-3 ">
           Add Post
         </button>

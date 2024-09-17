@@ -19,7 +19,7 @@ export default async function PostCards() {
             <div className="border-8 p-5">
               <p className="p-5">{x.title}</p>
               <br />
-              <p>rrrrrrrrrrrrr{x.body}</p>
+              <p>{x.body}</p>
             </div>
           </div>
         </Link>
