@@ -2,10 +2,13 @@ import React from "react";
 import GetData from "@/utils/fetchData";
 import Link from "next/link";
 import CreatPost from "./CreatPost";
+
 // import CreatePost from "./CreatePost";
 
 export default async function PostCards() {
-  const posts = await GetData("http://localhost:3000/api/admin/posts");
+  const posts = await GetData("http://localhost:3000/api/admin/posts",{
+    next: { tags: ["recatch"] },
+  });
 
   return (
     <>
@@ -16,8 +19,7 @@ export default async function PostCards() {
             <div className="border-8 p-5">
               <p className="p-5">{x.title}</p>
               <br />
-              <p>{x.body}</p>
-              <p>{x.id}</p>
+              <p>rrrrrrrrrrrrr{x.body}</p>
             </div>
           </div>
         </Link>
