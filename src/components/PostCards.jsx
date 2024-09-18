@@ -2,6 +2,7 @@ import React from "react";
 import GetData from "@/utils/fetchData";
 import Link from "next/link";
 import CreatPost from "./CreatPost";
+import DeletPost from "./DeletPost";
 
 // import CreatePost from "./CreatePost";
 
@@ -20,9 +21,10 @@ export default async function PostCards() {
               <p className="p-5">{x.title}</p>
               <br />
               <p>{x.body}</p>
+              <p>{x.id}</p>
             </div>
           </Link>
-          <button className="bg-red-600 w-28 p-4 m-10 h-20">Delet Post</button>
+         <DeletPost></DeletPost>
         </div>
       ))}
     </>

@@ -9,7 +9,7 @@ import { revalidateTag } from "next/cache"
 //         revalidateTag('recatch')
 // }
 
-export async function addUser(userInfo) {
+export  async function addUser(userInfo) {
     try {
       const response = await fetch("http://localhost:3000/api/admin/posts", {
         method: "POST",
@@ -27,3 +27,12 @@ export async function addUser(userInfo) {
       console.error("Failed to add recipe:", error);
     }
   }
+
+ 
+  
+  export async function DeletPostById() {
+    await fetch(`http://localhost:3000/api/admin/posts/${id}`, {
+        method: "DELETE",
+      });
+  }
+  
