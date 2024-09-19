@@ -11,10 +11,9 @@ export async function addUser(userInfo) {
       body: JSON.stringify(userInfo),
     });
     if (!response.ok) {
-        const erroreData = await response.json()
-            console.error('errrroredata:',erroreData)
-            
-        
+      const erroreData = await response.json();
+      console.error("errrroredata:", erroreData);
+
       throw new Error("Network response was not ok");
     }
 
@@ -24,8 +23,8 @@ export async function addUser(userInfo) {
   }
 }
 
-export async function DeletPostById() {
-  await fetch(`http://localhost:3000/api/admin/posts/${id}`, {
-    method: "DELETE",
-  });
-}
+// export async function DeletPostById() {
+//   await fetch(`http://localhost:3000/api/admin/posts/${id}`, {
+//     method: "DELETE",
+//   });
+// }

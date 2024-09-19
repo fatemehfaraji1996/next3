@@ -21,7 +21,9 @@ export default async function PostCards() {
               <p className="p-5">{x.title}</p>
               <br />
               <p>{x.body}</p>
-              <p>{x.id} JJJJJ</p>
+              <p>{x.id}</p>
+             
+
             </div>
           </Link>
          <DeletPost></DeletPost>

@@ -6,27 +6,25 @@ export default function CreatPost() {
   const [post, setPost] = useState({
     title: "",
     body: "",
-    postId: ""
+    id: "",
   });
   async function handleSubmit(e) {
     e.preventDefault();
-    const randomId ="458"
-    // const randomId = Math.floor(Math.random() * 1000000 + 1);
+    // const randomId = "458";
+    const randomId = Math.floor(Math.random() * 1000000 + 1);
 
-    const newPost = { ...post, postId: randomId };
+    const newPost = {...post, id:randomId };
     console.log(newPost);
-    
+
     await addUser(newPost);
-    setPost({ title: "", body: "", postId: "" });
+    setPost({ title: "", body: "", id: "" });
   }
 
   return (
-    // <form onSubmit={(e) => handleSubmit(e)}>
     <form onSubmit={handleSubmit}>
       <div className="m-5 bg-lime-200 w-72">
         <p className="m-10 italic  ">creat new post</p>
         <p>post</p>
-        {/* <input value={post} onChange={(e) => setPost(e.target.value)} /> */}
         <input
           placeholder="Enter your cpost"
           className="bg-lime-300 p-4 m-2"
