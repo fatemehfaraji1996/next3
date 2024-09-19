@@ -14,9 +14,8 @@ export default async function PostCards() {
       <CreatPost></CreatPost>
       {posts.map((x) => (
         <div className="flex w-2/3 bg-lime-200 p-10">
-          <Link key={x.id} href={`/posts/${x.id}`}>
-          {/* <Link key={x.id} href={`http://localhost:3000/api/admin/posts/${x.id}`}> */}
-
+          <Link key={x.id} href={`/postes/${x.id}`}>
+            {/* <Link key={x.id} href={`http://localhost:3000/api/admin/posts/${x.id}`}> */}
             <div className="border-8 p-5">
               <p className="p-5">{x.title}</p>
               <br />
