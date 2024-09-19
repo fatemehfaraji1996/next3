@@ -7,11 +7,9 @@ export default async function page({ params }) {
   const resss = await GetById(
     `http://localhost:3000/api/admin/posts/${params.postid}`
   );
-console.log(resss);
 
-  if(!resss.views){
-  notFound()
-  // console.log('pp');
+  if (!resss.views) {
+    notFound();
   }
   return (
     <>
@@ -23,7 +21,7 @@ console.log(resss);
           <div className="bg-slate-500 flex">
             <p className="bg-gray-300"> #{resss.tags}</p>
           </div>
-          <p>views: {resss.views}</p>
+          {/* {resss.views&&<p>views: {resss.views}</p>} */}
           <p>UserID: {resss.userId}</p>
         </div>
       </div>
