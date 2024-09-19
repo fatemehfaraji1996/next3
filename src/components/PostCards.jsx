@@ -22,7 +22,7 @@ export default async function PostCards() {
               <p>{x.id}</p>
             </div>
           </Link>
-          <DeletPost></DeletPost>
+          <DeletPost id={x.id}/>
         </div>
       ))}
     </>

@@ -1,8 +1,7 @@
 'use client'
 import { DeletPostById } from '@/utils/actions'
 import React from 'react'
-
-export default function DeletPost() {
+export default function DeletPost({id}) {
    const handelDelet= async()=>{
     DeletPostById(id)
    }

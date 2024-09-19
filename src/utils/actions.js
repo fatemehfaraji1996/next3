@@ -23,7 +23,10 @@ export async function addUser(userInfo) {
   }
 }
 
-export async function DeletPostById() {
+export async function DeletPostById({id}) {
+const userud= parseInt(id,10)
+console.log(userud);
+
   await fetch(`http://localhost:3000/api/admin/posts/${id}`, {
     method: "DELETE",
   });
