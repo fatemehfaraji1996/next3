@@ -8,7 +8,6 @@ export default async function PostCards() {
   const posts = await GetData("http://localhost:3000/api/admin/posts", {
     next: { tags: ["recatch"] },
   });
-
   return (
     <>
       <CreatPost></CreatPost>
@@ -22,7 +21,7 @@ export default async function PostCards() {
               <p>{x.id}</p>
             </div>
           </Link>
-          <DeletPost id={x.id}/>
+          <DeletPost id={x.id} />
         </div>
       ))}
     </>

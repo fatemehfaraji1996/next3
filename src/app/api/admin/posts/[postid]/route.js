@@ -4,10 +4,10 @@ export async function GET(req, { params }) {
 
   return Response.json(post);
 }
-export async function DELETE(req,{ params }) {
-  params.postid
+export async function DELETE(req, { params }) {
+  params.postid;
   const id = parseInt(params.postid, 10);
-console.log(id);
+  // console.log(id);
   const index = data.findIndex((x) => x.id === id);
 
   if (index === -1) {
