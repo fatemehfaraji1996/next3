@@ -23,8 +23,8 @@ export async function addUser(userInfo) {
   }
 }
 
-// export async function DeletPostById() {
-//   await fetch(`http://localhost:3000/api/admin/posts/${id}`, {
-//     method: "DELETE",
-//   });
-// }
+export async function DeletPostById() {
+  await fetch(`http://localhost:3000/api/admin/posts/${id}`, {
+    method: "DELETE",
+  });
+}

@@ -17,8 +17,8 @@ export function GET() {
 // }
 export async function POST(req) {
  const body = await req.json();
- const newPost = { ...body, id: body.id }; // اطمینان از اینکه آیدی اضافه می‌شود
+ const newPost = { ...body, id: body.id }
 data.push(newPost);
   
- return Response.json(newPost); // برگرداندن پست جدید با آیدی
+ return Response.json(newPost);
   }
