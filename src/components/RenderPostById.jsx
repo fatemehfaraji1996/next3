@@ -20,7 +20,7 @@ export default function RenderPostById({post}) {
 
   return (
     <>
-      <div className="flex w-2/3 bg-lime-200 p-10">
+      <div className="flex w-auto bg-lime-200 p-10">
         <div className="border-8 p-5">
           {isEditing ? (
             <>
@@ -28,20 +28,20 @@ export default function RenderPostById({post}) {
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="border p-1 mb-2"
+                className="border p-1 mb-2 h-36 w-2/3 "
               />
               <textarea
                 value={body}
                 onChange={(e) => setBody(e.target.value)}
-                className="border p-1 mb-2"
+                className="border p-1 mb-14  h-auto "
               />
               <input
                 type="text"
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
-                className="border p-1 mb-2"
+                className="border p-1 mb-2 h-60"
               />
-              <button onClick={handleSave} className="bg-lime-900 h-10">
+              <button onClick={handleSave} className="bg-lime-900 h-10 ">
                 {" "}
                 Save
               </button>{" "}
