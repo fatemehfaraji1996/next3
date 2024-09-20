@@ -18,6 +18,5 @@ export async function POST(req) {
  const body = await req.json();
  const newPost = { ...body, id: body.id }
 data.push(newPost);
-  
  return Response.json(newPost);
   }

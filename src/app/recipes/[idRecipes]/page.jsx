@@ -15,9 +15,7 @@ export default async function page({ params }) {
     `http://localhost:3000/api/admin/recipes/${params.idRecipes}`
   );
   // console.log(params.idRecipes);
-
   // console.log(recipeById);
-
   if (!recipeById.name) {
     notFound();
   }
