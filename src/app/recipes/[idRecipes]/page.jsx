@@ -12,8 +12,11 @@ export async function generateMetadata({ params, searchParams }) {
 }
 export default async function page({ params }) {
   const recipeById = await GetData(
-    `https://dummyjson.com/recipes/${params.idRecipes}`
+    `http://localhost:3000/api/admin/recipes/${params.idRecipes}`
   );
+  // console.log(params.idRecipes);
+
+  // console.log(recipeById);
 
   if (!recipeById.name) {
     notFound();

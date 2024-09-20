@@ -8,6 +8,8 @@ import GetData from "@/utils/fetchData";
 const { recipes } = await GetData("https://dummyjson.com/recipes");
 export function GET() {
   return Response.json(recipes);
+
+  
 }
 // async function POST(req) {
 //   const body = await req.json()
