@@ -32,14 +32,26 @@ export async function DeletPostById(id) {
   revalidateTag("recatch");
 }
 
-// export async function editPost(id, updatedInfo) {
-//   await fetch(`http://localhost:3000/api/admin/posts/${id}`, {
-//     method: "PATCH",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(updatedInfo),
-//   });
+//   PAGE RECEPI //////////////
+export async function addRecipe(recipePost) {
+  try {
+    const response = await fetch("http://localhost:3000/api/admin/recipes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(recipePost),
+    });
+    if (!response.ok) {
+      const erroreData = await response.json();
+      console.error("errrroredata:", erroreData);
 
-//   revalidateTag("pos");
-// }
+
+      throw new Error("Network response was not ok");
+    }
+
+    revalidateTag("recatch");
+  } catch (error) {
+    console.error("ERRORE:", error);
+  }
+}

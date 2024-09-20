@@ -5,24 +5,13 @@ import React from "react";
 // import FechDataRecipy from "./FechDataRecipy";
 
 import { useRouter } from "next/navigation";
+import CreatRecipePost from "./CreatRecipePost";
 export default function ResepiCards({ recipesArr }) {
-  
-  // const foodsRecipes = await GetData("https://dummyjson.com/recipes");
-  // const recipesArr = await foodsRecipes.recipes;
-  // if (recipesArr===undefined){
-  //   console.log(recipesArr);
-    
-  // }
-
+ 
   const router = useRouter();
   return (
     <>
-      <div className="m-5">
-        <button id="addb" className="bg-lime-400 p-4 ">
-          Add Recipe
-        </button>
-        <input className="bg-lime-200 p-4" type="text" />
-      </div>
+      <CreatRecipePost/>
       <div className="flex flex-wrap gap-5  p-10">
         {recipesArr.map((x) => {
           return (
