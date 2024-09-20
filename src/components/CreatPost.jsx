@@ -14,7 +14,7 @@ export default function CreatPost() {
     const randomId = Math.floor(Math.random() * 1000000 + 1);
 
     const newPost = {...post, id:randomId };
-    console.log(newPost);
+    // console.log(newPost);
 
     await addUser(newPost);
     setPost({ title: "", body: "", id: "" });

@@ -1,30 +1,21 @@
-// import GetById from "@/utils/GetById";
-import PostCartId from "@/components/UserCards";
-import React from "react";
+
+import RenderPostById from "@/components/RenderPostById";
 import GetById from "@/utils/GetById";
 import { notFound } from "next/navigation";
+
 export default async function page({ params }) {
   const resss = await GetById(
     `http://localhost:3000/api/admin/posts/${params.postid}`
   );
-
+  
   if (!resss.views) {
     notFound();
   }
-  return (
-    <>
-      <div className="flex w-2/3 bg-lime-200 p-10">
-        <div className="border-8 p-5">
-          <p>{resss.title}</p>
-          <br />
-          <p>{resss.body}</p>
-          <div className="bg-slate-500 flex">
-            <p className="bg-gray-300"> #{resss.tags}</p>
-          </div>
-          {/* {resss.views&&<p>views: {resss.views}</p>} */}
-          <p>UserID: {resss.userId}</p>
-        </div>
-      </div>
-    </>
-  );
+return(
+  <>
+  <RenderPostById post={resss} />
+  </>
+)
+
+  
 }
