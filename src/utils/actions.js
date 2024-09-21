@@ -52,3 +52,12 @@ export async function addRecipe(recipePost) {
     // console.error("ERRORE:", error);
   }
 }
+// DELET RECEPI
+export async function DeletRecipeById(id) {
+  await fetch(`http://localhost:3000/api/admin/recipes/${id}`, {
+    method: "DELETE",
+  });
+  console.log(id);
+  
+  revalidateTag("recatch");
+}

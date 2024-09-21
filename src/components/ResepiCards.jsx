@@ -6,12 +6,13 @@ import React from "react";
 
 import { useRouter } from "next/navigation";
 import CreatRecipePost from "./CreatRecipePost";
+import DeletRecepe from "./DeletReceoy";
+
 export default function ResepiCards({ recipesArr }) {
- 
   const router = useRouter();
   return (
     <>
-      <CreatRecipePost/>
+      <CreatRecipePost />
       <div className="flex flex-wrap gap-5  p-10">
         {recipesArr.map((x) => {
           return (
@@ -27,8 +28,9 @@ export default function ResepiCards({ recipesArr }) {
                   className="p-3 bg-green-300 "
                   onClick={() => router.push(`/recipes/${x.id}`)}
                 >
-                  Go to resepe
+                  Go to recipe
                 </button>
+             <DeletRecepe id={x.id}/>
                 {/* </Link> */}
               </div>
             </>

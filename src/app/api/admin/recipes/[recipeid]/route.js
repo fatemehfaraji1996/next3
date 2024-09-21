@@ -1,5 +1,7 @@
 import GetData from "@/utils/fetchData";
-import { data } from "../../posts/route";
+import { data } from "../route";
+// import { data } from "../../posts/route";
+console.log(data);
 
 export async function GET(req, { params }) {
   const data = await GetData("https://dummyjson.com/recipes");
@@ -10,11 +12,26 @@ export async function GET(req, { params }) {
   }
   return Response.json(response);
 }
-// POST 
-// export async function POST(req) {
-//   const body = await req.json();
-//   console.log(body);
-//   const newPost = { ...body, id: body.id }
-//  data.push(newPost);
-//   return Response.json(newPost);
-//    }
+
+export async function DELETE(req, { params }) {
+  console.log( params.recipeid);
+console.log(req.body);
+
+  const id = parseInt(params.recipeid,10);
+  console.log(id);
+  const index = data.findIndex((x) => x.id == id);
+
+  if (index == -1) {
+    return new Response(JSON.stringify({ error: "Item not found" }), {
+      status: 404,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  const deleted = data.splice(index, 1)[0];
+
+  return new Response(JSON.stringify(deleted), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
+}

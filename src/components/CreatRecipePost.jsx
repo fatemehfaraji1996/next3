@@ -7,20 +7,22 @@ export default function CreatRecipePost() {
   const [recipeDescription, setRecipeDescription] = useState("");
   const [recipeTags, setRecipeTags] = useState("");
 
-const handleSubmit = async (e) => {
-    const randomId =  Math.floor(Math.random() * 1000000 + 1)
-    console.log(randomId);
-    e.preventDefault(); 
+  const handleSubmit = async (e) => {
+    const randomId = Math.floor(Math.random() * 1000000 + 1);
+    // console.log(randomId);
+    e.preventDefault();
     const recipePost = {
       name: recipeName,
-    //   description: recipeDescription,
-    ingredients: recipeDescription,
-    id:randomId,
+      //   description: recipeDescription,
+      ingredients: recipeDescription,
+      id: randomId,
       tags: recipeTags.split(",").map((tag) => tag.trim()), //
     };
+    console.log(recipePost);
+    
 
     await addRecipe(recipePost);
-    
+
     setRecipeName("");
     setRecipeDescription("");
     setRecipeTags("");
