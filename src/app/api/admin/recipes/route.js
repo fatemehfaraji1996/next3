@@ -9,11 +9,11 @@ export function GET() {
 }
 export async function POST(req) {
   const body = await req.json();
-  // console.log(body);
+  console.log(body);
   
-  // const recipePost = { ...body }
+  const recipePost = { ...body }
   const ingredients = { ...body }
-  // const name = { ...body }
+  const name = { ...body }
 
 
  data.push(ingredients);

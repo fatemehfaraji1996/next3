@@ -20,7 +20,7 @@ export default function ResepiCards({ recipesArr }) {
                 <h1 className="text-xl p-5 ">{x.name}</h1>
                 <hr />
                 <p className="p-5">{x.ingredients}</p>
-                {/* <p>{x. description}</p> */}
+                <p>{x.id}</p>
                 {/* <Link href={`/recipes/${x.id}`}> */}
                 {/* <button className="p-3 bg-green-300 ">Go to resepe</button> */}
                 <button
