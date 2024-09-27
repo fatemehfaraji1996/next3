@@ -1,7 +1,7 @@
 import GetData from "@/utils/fetchData";
 import { data } from "../route";
 // import { data } from "../../posts/route";
-console.log(data);
+// console.log(data);
 
 export async function GET(req, { params }) {
   const data = await GetData("https://dummyjson.com/recipes");
@@ -14,7 +14,9 @@ export async function GET(req, { params }) {
 }
 
 export async function PATCH(req, { params }) {
-  const userId = parseInt(params.id);
+  const userId = parseInt(params.recipeid);
+  console.log(userId);
+  
   const updatedInfo = await req.json();
 
   const userIndex = data.findIndex((x) => x.id === userId);
