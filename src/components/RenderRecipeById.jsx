@@ -9,7 +9,7 @@ export default function RenderRecipeById({recipe}) {
 console.log(e.target.defaultValue);
 
     }
-  return (
+  return(
     <div className="w-3/4 bg-lime-300 p-5">
     {/* <Image
       src={recipeById.image}
