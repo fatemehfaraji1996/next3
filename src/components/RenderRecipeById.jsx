@@ -21,7 +21,8 @@ console.log(e.target.defaultValue);
     <p>instructions:{recipeById.instructions}</p>
     <p>#{recipeById.tags}</p>
     <button className='bg-green-600 p-5'>Edit Recipe</button>
-    <input  onChange={handelChange} defaultValue={recipeById.tags}  type="text"  />
+    <input  onChange={handelChange}
+     defaultValue={recipeById.tags}  type="text"  />
   </div>
   )
 }
